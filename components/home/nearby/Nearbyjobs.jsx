@@ -12,7 +12,7 @@ const NearbyJobs = () => {
 		query: 'React Native Developer',
 		num_pages: 1
 	})
-	console.log(data)
+	// console.log(data)
 	const router = useRouter()
 
 	return (
