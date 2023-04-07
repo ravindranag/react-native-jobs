@@ -40,7 +40,7 @@ const useFetch = (endpoint, query) => {
 	}
 
 	useEffect(() => {
-		console.log(rapidApiKey)
+		// console.log(rapidApiKey)
 		fetchData()
 	}, [])
 

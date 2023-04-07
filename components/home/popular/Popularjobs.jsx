@@ -5,8 +5,10 @@ import styles from './popularjobs.style'
 import PopularJobCard from '../../common/cards/popular/PopularJobCard'
 import { COLORS, SIZES } from '../../../constants'
 import useFetch from '../../../hooks/useFetch'
+import { useRouter } from 'expo-router'
 
 const PopularJobs = () => {
+	const router = useRouter()
 	const { data, error, loading, refetch } = useFetch(
 		'search',
 		{
@@ -16,6 +18,9 @@ const PopularJobs = () => {
 	)
 	const [selectedJob, setSelectedJob] = useState()
 
+	const handleCardPress = (item) => {
+		router.push(`/job-detail/${item.job_id}`)
+	}
 	// console.log(data)
 
   return (
@@ -39,7 +44,7 @@ const PopularJobs = () => {
 						renderItem={({item}) => (
 							<PopularJobCard 
 								item={item}
-								handleCardPress={() => {}}
+								handleCardPress={handleCardPress}
 								selectedJob={selectedJob}
 							/>
 						)}
