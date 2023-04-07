@@ -17,7 +17,9 @@
     "updates": {
       "url": "https://u.expo.dev/ff2c0126-82de-42a2-913d-8a628cf66f71"
     },
-    "android": {},
+    "android": {
+      "package": "com.ravindranag.jobs"
+    },
     "ios": {}
   }
 }
